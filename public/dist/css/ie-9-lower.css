@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* IE 9 and lower */
+
+@media screen and (min-width: 768px){
+  .loan-details.row {
+	  display: block;
+  }
+  
+  .loan-details.row .col-md-6 {
+	  padding: 30px;
+	  min-height: 350px;
+  }
+}
+
+@media screen and (min-width: 992px){
+	.loan-details.row.loan-offer .col-md-6:nth-child(2){
+		min-height: 350px;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.what-need-col:first-child {
+		background-image:none;
+	}
+
+	.what-need-col {
+		padding: 30px;
+		min-height: 300px;
+	}
+
+	.what-need-col:first-child,
+	.what-need-col:nth-child(2),
+	.what-need-col:nth-child(3),
+	.what-need-col:nth-child(4),
+	.what-need-col:nth-child(5)  {
+		background-image: none;
+	}
+
+	.what-need-col:nth-child(5)  {
+		display: none;
+	}
+}
+
+select.form-control {
+	background-image:none;
+}

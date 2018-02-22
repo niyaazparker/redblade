@@ -1,0 +1,36 @@
+h2{
+    color: #406982;
+}
+
+.merchant-nav.navbar{
+    height: 80px;
+    background-color: #f2f2f2;
+}
+
+.merchant-nav .container > .navbar-header{
+    height: auto;
+}
+
+.merchant-nav .navbar-brand{
+    padding: 15px;
+}
+
+.merchant-nav .navbar-brand img{
+    width: 208px;
+    height: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    .merchant-nav .navbar-brand img {
+        width: 150px;
+        height: 50px;
+    }
+}
+
+.start-app-btn {
+    background-color: #406982;
+}
+
+.start-app-btn:hover{
+    background-color: #164A5D;
+}

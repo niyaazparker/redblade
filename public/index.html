@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html id="ng-app" ng-app="app"> <!-- id="ng-app" IE<8 -->
+
+    <head>
+        <title>Simple example</title>
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+        <!--Slick styles-->
+        <link rel="stylesheet" type="text/css" href="dist/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="dist/slick/slick-theme.css"/>
+        <!--<link rel="stylesheet" type="text/css" href="slick/slick-style.css"/>-->
+
+        <!-- Fasta styles -->
+        <link href="dist/css/fasta-styles.css" rel="stylesheet">
+        <link href="dist/css/tablet.css" rel="stylesheet">
+        <link href="dist/css/mobile.css" rel="stylesheet">
+
+        <!-- Custom styles -->
+        <link href="dist/css/custom.css" rel="stylesheet">
+
+        <!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="css/ie-9-lower.css" />
+        <![endif]-->
+
+        <!--Link Raleway Google Font-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,500" rel="stylesheet">
+        <!--FontAwsome-->
+        <script src="dist/js/457de74f1b.js"></script>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
+       
+        <script src="dist/js/jquery-1.8.3.min.js"></script>
+        <script src="console-sham.js"></script>
+
+        <script src="dist/js/bootstrap.min.js"></script>
+
+        <!--<script src="../bower_components/angular/angular.js"></script>-->
+        <script src="dist/js/angular.min.js"></script>
+        <script src="dist/js/angular-file-upload.min.js"></script>
+        <script src="controllers.js"></script>
+
+        <style>
+            .my-drop-zone { border: dotted 3px lightgray; }
+            .nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+            .another-file-over-class { border: dotted 3px green; }
+
+            html, body { height: 100%; }
+            tr.info:nth-child(0) {
+                top: 0px;
+            }
+            tr.info:nth-child(2) {
+                top: 38px;
+            }
+            tr.info:nth-child(3) {
+                top: 76px;
+            }
+        </style>
+
+    </head>
+
+   
+    <body ng-controller="AppController" nv-file-drop="" uploader="uploader" filters="queueLimit, Extensions">
+
+        <div class="container">
+
+            
+
+           <!-- NAVIGATION -->
+
+<nav class="navbar navbar-default">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="index.html"><img src="dist/images/fasta-logo.svg" alt="Fasta"/></a></div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="defaultNavbar1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">About</a></li>
+        <li><a href="#">How it works</a></li>
+        <li class="login-button"><a href="#">Login</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container --> 
+</nav>
+
+
+<section class="container">
+
+    <!--PAY OFF LINE-->
+    <div class="landing-pay-off container text-center mt10 mb10 ng-scope">
+        <h1 class="mt0">Byline goes here.</h1>
+    </div>
+
+    <h1>Bank account</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group required">
+                <label for="bank-name">Bank name</label>
+                <select class="form-control" id="bank-name">
+                    <option disabled selected>Select a bank</option>
+                    <option>Absa</option>
+                    <option>Capitec</option>
+                    <option>FNB</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group required">
+                <label for="bank-account-number">Bank account number</label>
+                <input class="form-control" id="bank-account-number" name="bank-account-number" type="tel" required>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="wrap bg-light-grey mt30">
+    <div class="container">
+        <div class="row bank-statements">
+            <div class="col-md-12">
+                <h2>3 latest bank statements</h2>
+            </div>
+            <div class="col-md-6 text-center">
+                <button class="btn upload-btn">
+                    <a href="#">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        Fetch from bank
+                    </a>
+                </button>
+                <i class="fa fa-info-circle text-dark-blue" aria-hidden="true"></i>
+                <div class="or">
+                or
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <button class="btn upload-btn" data-toggle="modal" data-target="#myModal" type="button">
+                    <a href="#">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                        Upload
+                    </a>
+                </button>
+                <i class="fa fa-info-circle text-dark-blue" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="wrap bottom-grey-bar">
+    <div class="container">
+        <div class="text-center">
+            <button class="btn start-app-btn"><a href="affordability.html">SUBMIT</a></button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 text-left copyright">
+                Copyright <span class="text-green">©</span> 2017 Fasta
+            </div>
+            <div class="col-sm-6 text-right powered-by">
+                <span>Fasta is powered by</span> <a href="http://www.redblade.io" target="_blank"><img class="rb-logo" src="dist/images/redblade-logo.svg" alt="Redblade Holdings logo"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12 mx-small text-center upl">
+
+                    
+
+                    <div ng-show="uploader.isHTML5">
+                      
+                        <div class="well my-drop-zone " id="mydrop" nv-file-select="" uploader="uploader" >
+                            <i class="fa fa-arrow-circle-up big-font" aria-hidden="true"></i><br>
+                           Upload/ drag and drop <br>
+                           3 Latest bank statements here
+                            
+                        </div>
+                        <input type="file" style="display: none" multiple id="mydropping" nv-file-select="" uploader="uploader" filters="Extensions,quelimit" required />
+                    </div>
+                    
+                     <div class="error" style="display: none;"><span class="glyphicon glyphicon-warning-sign error-colour"></span> &nbsp;Incorrect file type, please upload ether pdf or jpg</div>
+                     <div class="upl-border">
+                     <div class="row info mx-smaller"  ng-repeat="item in uploader.queue | limitTo : 3">
+                        
+                        <span ng-show="item.isSuccess"><i class="col-lg-1 glyphicon glyphicon-ok icon-ok"></i></span>
+                        
+                        
+                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-left" style="display: inline-block;">Most Recent</div>
+                         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-left" style="display: inline-block;"> 
+                            <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+                                <span class="glyphicon glyphicon-minus"></span>
+                            </button>
+                         </div>   
+                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 text-left" ng-show="uploader.isHTML5">{{ item.file.name }}</div>
+                         
+                        
+                     </div>
+                 </div>
+                    <div class="col-lg-12">
+                            
+                            <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="uploader.queue.length < 3">
+                                Done
+                            </button>
+                          </div>
+
+                </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+        $('.btn-s').click(function(){
+        setTimeout("$('#myModal').modal('hide');",2000);
+        });
+        $('#mydrop').click(function(event) {
+       $('#mydropping').click();
+    });
+    </script>
+</html>
+

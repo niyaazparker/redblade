@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* CSS DIRECTORY
+	1. =RETINA PORTRAIT AND LANDSCAPE
+	2. =RETINA PORTRAIT
+	3. =RETINA LANDSCAPE
+*/
+
+/* COLORS
+	- Knickle Green  	#47b667
+	- Knickle Blue   	#3f6881
+	- Dark Blue 	 	#3d5567
+	- Lighter Green    	#7bd593
+	- Background Grey	#eceeee
+	- Lighter Grey    	#f7f7f7
+	- Input fields Grey #f3f3f3
+*/
+
+
+/* ==========================================
+    1. RETINA MOBILE PORTRAIT AND LANDSCAPE 
+   ========================================== */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    /*footer{
+		margin-bottom:80px;
+	}*/
+}
+	
+
+/* ================================
+     2. RETINA MOBILE PORTRAIT  
+   ================================ */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 767px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  
+	/* GOES HERE */
+	
+  }
+  
+  
+/* ================================
+      3. RETINA MOBILE LANDSCAPE 
+   ================================ */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 767px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    /* GOES HERE */
+	
+}
